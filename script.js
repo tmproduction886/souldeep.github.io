@@ -312,4 +312,87 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Run once on page load
     animateOnScroll();
+});
+
+// Waitlist form handling
+document.addEventListener('DOMContentLoaded', function() {
+    const waitlistForm = document.getElementById('waitlistForm');
+    
+    if (waitlistForm) {
+        waitlistForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = this.querySelector('input[name="email"]').value;
+            
+            // Here you would normally send the email to your server
+            // For now, we'll just show a success message
+            
+            // Save to local storage to remember the user signed up
+            localStorage.setItem('waitlistEmail', email);
+            
+            // Replace form with success message
+            waitlistForm.innerHTML = `
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank you for joining our waitlist!</h3>
+                    <p>We'll notify you at <strong>${email}</strong> when Soul Deep launches.</p>
+                </div>
+            `;
+        });
+    }
+    
+    // Check if user already signed up
+    const savedEmail = localStorage.getItem('waitlistEmail');
+    if (savedEmail && waitlistForm) {
+        waitlistForm.innerHTML = `
+            <div class="success-message">
+                <i class="fas fa-check-circle"></i>
+                <h3>You're on our waitlist!</h3>
+                <p>We'll notify you at <strong>${savedEmail}</strong> when Soul Deep launches.</p>
+            </div>
+        `;
+    }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Accordion functionality for FAQ
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+});
+
+// Animation on scroll
+document.addEventListener('scroll', function() {
+    const elements = document.querySelectorAll('.fade-in-element');
+    
+    elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        
+        // Check if element is in viewport
+        if (position.top < window.innerHeight && position.bottom >= 0) {
+            element.classList.add('visible');
+        }
+    });
 }); 
