@@ -1,5 +1,6 @@
 :root {
     --primary-color: #6A4CFF;
+    --primary-light: #E8E3FF;
     --primary-dark: #5A3FE0;
     --secondary-color: #FF6B6B;
     --secondary-dark: #E85A5A;
@@ -8,7 +9,12 @@
     --dark-color: #292F36;
     --light-color: #F7F9FC;
     --success-color: #2ECC71;
+    --success-light: #E8F8F0;
+    --danger-color: #E74C3C;
     --warning-color: #F39C12;
+    --text-color: #4A4A4A;
+    --text-muted: #8A8A8A;
+    --border-color: #E9ECEF;
     --gray-100: #F8F9FA;
     --gray-200: #E9ECEF;
     --gray-300: #DEE2E6;
@@ -1158,4 +1164,270 @@ footer {
 
 .feature-icon {
     animation: float 3s ease-in-out infinite;
+}
+
+/* App Store Badge */
+.app-store-badge {
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    transition: transform 0.3s ease;
+}
+
+.app-store-badge:hover {
+    transform: scale(1.05);
+}
+
+/* iOS Device Mockup */
+.ios-device-mockup {
+    position: relative;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.ios-device-frame {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.ios-device-screen {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    width: 90%;
+    height: 88%;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.ios-device-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* iOS UI Elements */
+.ios-notification {
+    background-color: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    animation: slideIn 0.5s ease-out;
+}
+
+.ios-notification-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.ios-notification-content {
+    flex: 1;
+}
+
+.ios-notification-title {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.ios-notification-message {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* iOS App Screenshots Carousel */
+.app-screenshots {
+    margin: 40px 0;
+    position: relative;
+}
+
+.screenshots-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+
+.screenshots-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.screenshot {
+    scroll-snap-align: center;
+    min-width: 220px;
+    height: 440px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 10px solid var(--dark-color);
+    transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: translateY(-10px);
+}
+
+.screenshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.screenshot-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.screenshot-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--gray-300);
+    transition: background-color 0.3s ease;
+}
+
+.screenshot-dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* App Rating Widget */
+.app-rating-widget {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 30px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+.app-rating-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.app-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.app-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-rating-title {
+    text-align: left;
+}
+
+.app-rating-title h4 {
+    margin: 0 0 5px;
+    font-size: 1.2rem;
+}
+
+.app-rating-title p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.app-rating-stars {
+    margin: 15px 0;
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+.app-rating-count {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* Mobile-First Optimizations */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .btn-large {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+    }
+    
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+    
+    .ios-device-mockup {
+        margin: 30px auto;
+    }
+    
+    .screenshots-container {
+        padding: 10px 0;
+    }
+    
+    .screenshot {
+        min-width: 180px;
+        height: 360px;
+    }
+    
+    .pricing-container {
+        padding: 0 10px;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+        width: 100%;
+    }
+    
+    .final-cta h2 {
+        font-size: 2.2rem;
+    }
 } 
