@@ -159,10 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
             // You can add analytics tracking here
             console.log('Download button clicked:', this.href);
 
-            // Optional: Add a small delay to ensure the click is registered
-            setTimeout(() => {
-                window.location.href = this.href;
-            }, 100);
+            // Let the natural link behavior handle the navigation
+            // No manual window.location.href to prevent double opening
         });
     });
 });
