@@ -2171,12 +2171,24 @@ img {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.simple-header .container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0;
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .app-brand {
@@ -2186,15 +2198,16 @@ img {
 }
 
 .app-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
 }
 
 .app-brand h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--dark-color);
     margin: 0;
+    font-weight: 800;
 }
 
 .header-cta-button {
@@ -2253,18 +2266,23 @@ img {
 }
 
 @media (max-width: 768px) {
+    .simple-header .container {
+        padding: 0 15px;
+    }
+
     .header-content {
         flex-direction: column;
         gap: 15px;
+        padding: 0 15px;
     }
 
     .app-brand h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .app-icon {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
     }
 
     .header-cta-button {
@@ -2278,8 +2296,22 @@ img {
         padding: 15px 0;
     }
 
+    .simple-header .container {
+        padding: 0 10px;
+    }
+
     .header-content {
         gap: 12px;
+        padding: 0 10px;
+    }
+
+    .app-brand h1 {
+        font-size: 1.6rem;
+    }
+
+    .app-icon {
+        width: 36px;
+        height: 36px;
     }
 
     .header-cta-button {
