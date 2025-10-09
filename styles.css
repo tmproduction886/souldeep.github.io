@@ -51,9 +51,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -689,7 +689,10 @@ img {
     margin-bottom: 60px;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    padding: 0 20px;
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Download Section */
@@ -2029,8 +2032,8 @@ img {
 
 .hero-carousel {
     position: relative;
-    width: 320px;
-    max-width: 90vw;
+    width: 300px;
+    max-width: 70vw;
     height: auto;
     aspect-ratio: 9/16;
     margin: 0 auto;
@@ -2099,15 +2102,19 @@ img {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 30px;
+    }
+
     .carousel-section {
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
-        padding: 0 20px;
+        padding: 0 40px;
     }
 
     .hero-carousel {
-        width: 85vw;
-        max-width: 85vw;
+        width: 280px;
+        max-width: 60vw;
         aspect-ratio: 9/16;
         border-radius: 20px;
     }
@@ -2125,15 +2132,19 @@ img {
 }
 
 @media (max-width: 576px) {
+    .container {
+        padding: 0 25px;
+    }
+
     .carousel-section {
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     .hero-carousel {
-        width: 90vw;
-        max-width: 90vw;
+        width: 260px;
+        max-width: 65vw;
         aspect-ratio: 9/16;
         border-radius: 16px;
     }
@@ -2161,6 +2172,10 @@ img {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .carousel-section {
         margin-left: calc(-50vw + 50%);
         margin-right: calc(-50vw + 50%);
@@ -2168,8 +2183,8 @@ img {
     }
 
     .hero-carousel {
-        width: 95vw;
-        max-width: 95vw;
+        width: 240px;
+        max-width: 70vw;
         aspect-ratio: 9/16;
     }
 
