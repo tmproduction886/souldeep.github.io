@@ -30,8 +30,17 @@ const animateOnScroll = () => {
     });
 };
 
-// Run animation check on scroll
-window.addEventListener('scroll', animateOnScroll);
+// Run animation check on scroll with throttling for performance
+let scrollTimeout;
+const throttledAnimateOnScroll = () => {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+        animateOnScroll();
+        scrollTimeout = null;
+    }, 16); // ~60fps
+};
+
+window.addEventListener('scroll', throttledAnimateOnScroll, { passive: true });
 
 // App Screenshots Carousel
 const screenshotsContainer = document.querySelector('.screenshots-container');

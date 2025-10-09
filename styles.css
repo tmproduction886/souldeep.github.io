@@ -76,6 +76,19 @@ p {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+}
+
+/* Performance optimizations */
+img[loading="lazy"] {
+    content-visibility: auto;
+    contain-intrinsic-size: 350px 600px;
+}
+
+.carousel-slide img {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .section-title {
