@@ -150,6 +150,42 @@ document.addEventListener('DOMContentLoaded', function () {
     animateOnScroll();
 });
 
+// Reading Progress Bar for Articles
+document.addEventListener('DOMContentLoaded', function () {
+    const readingProgress = document.getElementById('reading-progress');
+    const articleBody = document.querySelector('.article-body');
+
+    if (readingProgress && articleBody) {
+        function updateReadingProgress() {
+            const articleTop = articleBody.offsetTop;
+            const articleHeight = articleBody.offsetHeight;
+            const windowHeight = window.innerHeight;
+            const scrollTop = window.pageYOffset;
+
+            // Calculate how much of the article has been scrolled through
+            const articleStart = articleTop - windowHeight;
+            const articleEnd = articleTop + articleHeight;
+            const scrollPosition = scrollTop - articleStart;
+            const totalScrollable = articleEnd - articleStart;
+
+            if (scrollPosition >= 0 && scrollPosition <= totalScrollable) {
+                const progress = (scrollPosition / totalScrollable) * 100;
+                readingProgress.style.width = Math.min(100, Math.max(0, progress)) + '%';
+            } else if (scrollPosition < 0) {
+                readingProgress.style.width = '0%';
+            } else {
+                readingProgress.style.width = '100%';
+            }
+        }
+
+        // Update progress on scroll
+        window.addEventListener('scroll', updateReadingProgress);
+
+        // Initial update
+        updateReadingProgress();
+    }
+});
+
 // Track download button clicks for analytics
 document.addEventListener('DOMContentLoaded', function () {
     const downloadButtons = document.querySelectorAll('a[href*="apps.apple.com"]');
