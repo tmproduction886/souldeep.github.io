@@ -687,6 +687,9 @@ img {
 /* Carousel Section */
 .carousel-section {
     margin-bottom: 60px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 0 20px;
 }
 
 /* Download Section */
@@ -2096,6 +2099,12 @@ img {
 }
 
 @media (max-width: 768px) {
+    .carousel-section {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+    }
+
     .hero-carousel {
         width: 90vw;
         max-width: 90vw;
@@ -2116,6 +2125,12 @@ img {
 }
 
 @media (max-width: 576px) {
+    .carousel-section {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+    }
+
     .hero-carousel {
         width: 95vw;
         max-width: 95vw;
@@ -2146,6 +2161,12 @@ img {
 }
 
 @media (max-width: 480px) {
+    .carousel-section {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+    }
+
     .hero-carousel {
         width: 98vw;
         max-width: 98vw;
