@@ -687,8 +687,8 @@ img {
 /* Carousel Section */
 .carousel-section {
     margin-bottom: 60px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     padding: 0 20px;
 }
 
@@ -841,8 +841,8 @@ img {
     }
 
     .hero-carousel {
-        width: 90vw;
-        max-width: 90vw;
+        width: 85vw;
+        max-width: 85vw;
         aspect-ratio: 9/16;
         border-radius: 20px;
     }
@@ -879,8 +879,8 @@ img {
     }
 
     .hero-carousel {
-        width: 95vw;
-        max-width: 95vw;
+        width: 90vw;
+        max-width: 90vw;
         aspect-ratio: 9/16;
         border-radius: 16px;
     }
@@ -919,8 +919,8 @@ img {
 
 @media (max-width: 480px) {
     .hero-carousel {
-        width: 98vw;
-        max-width: 98vw;
+        width: 95vw;
+        max-width: 95vw;
         aspect-ratio: 9/16;
     }
 
@@ -2100,14 +2100,14 @@ img {
 
 @media (max-width: 768px) {
     .carousel-section {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
         padding: 0 20px;
     }
 
     .hero-carousel {
-        width: 90vw;
-        max-width: 90vw;
+        width: 85vw;
+        max-width: 85vw;
         aspect-ratio: 9/16;
         border-radius: 20px;
     }
@@ -2126,14 +2126,14 @@ img {
 
 @media (max-width: 576px) {
     .carousel-section {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
         padding: 0 20px;
     }
 
     .hero-carousel {
-        width: 95vw;
-        max-width: 95vw;
+        width: 90vw;
+        max-width: 90vw;
         aspect-ratio: 9/16;
         border-radius: 16px;
     }
@@ -2162,14 +2162,14 @@ img {
 
 @media (max-width: 480px) {
     .carousel-section {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
         padding: 0 20px;
     }
 
     .hero-carousel {
-        width: 98vw;
-        max-width: 98vw;
+        width: 95vw;
+        max-width: 95vw;
         aspect-ratio: 9/16;
     }
 
