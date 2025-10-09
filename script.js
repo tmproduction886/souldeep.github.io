@@ -596,6 +596,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize carousel
     function initCarousel() {
+        console.log('Initializing carousel with', totalSlides, 'slides');
+
         // Set initial position
         goToSlide(0);
 
@@ -604,6 +606,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add event listeners
         addEventListeners();
+
+        console.log('Carousel initialized successfully');
     }
 
     // Go to specific slide
@@ -640,7 +644,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Start auto-play (always running)
     function startAutoPlay() {
         if (autoPlayInterval) clearInterval(autoPlayInterval);
+        console.log('Starting auto-play with 3 second interval');
         autoPlayInterval = setInterval(() => {
+            console.log('Auto-advancing to next slide');
             nextSlide();
         }, 3000);
     }
@@ -721,42 +727,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Wait for images to load before initializing
-    let loadedImages = 0;
-    const totalImages = slides.length;
-
-    slides.forEach(slide => {
-        const img = slide.querySelector('img');
-        if (img) {
-            if (img.complete) {
-                loadedImages++;
-                if (loadedImages === totalImages) {
-                    initCarousel();
-                }
-            } else {
-                img.addEventListener('load', () => {
-                    loadedImages++;
-                    if (loadedImages === totalImages) {
-                        initCarousel();
-                    }
-                });
-                img.addEventListener('error', () => {
-                    loadedImages++;
-                    if (loadedImages === totalImages) {
-                        initCarousel();
-                    }
-                });
-            }
-        } else {
-            loadedImages++;
-            if (loadedImages === totalImages) {
-                initCarousel();
-            }
-        }
-    });
-
-    // Fallback: initialize if all images are already loaded
-    if (loadedImages === totalImages) {
-        initCarousel();
-    }
+    // Initialize carousel immediately (don't wait for lazy-loaded images)
+    initCarousel();
 }); 
