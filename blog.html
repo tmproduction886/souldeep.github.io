@@ -15,7 +15,8 @@
         content="wisdom blog,personal growth,spiritual development,mindfulness,inspiration,life insights">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -24,314 +25,312 @@
 </head>
 
 <body>
-    <!-- Simple Header -->
-    <header class="simple-header">
-        <div class="header-content">
-            <div class="app-brand">
-                <img src="images/app-icon-small.png" alt="Soul Deep" class="app-icon">
-                <h1>Soul Deep</h1>
+    <!-- Header -->
+    <header class="blog-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/app-icon-small.png" alt="Soul Deep" class="logo-icon">
+                    <span class="logo-text">Soul Deep</span>
+                </div>
+                <nav class="nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="privacy-policy.html" class="nav-link">Privacy</a>
+                    <a href="terms-of-service.html" class="nav-link">Terms</a>
+                </nav>
+                <a href="https://apps.apple.com/us/app/soul-deep-clarity-moments/id6747335102" class="cta-button">
+                    <i class="fab fa-apple"></i>
+                    <span>Get App</span>
+                </a>
             </div>
-            <nav class="main-nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="blog.html" class="nav-link active">Blog</a>
-                <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                <a href="terms-of-service.html" class="nav-link">Terms of Service</a>
-            </nav>
-            <a href="https://apps.apple.com/us/app/soul-deep-clarity-moments/id6747335102" class="header-cta-button">
-                <i class="fab fa-apple"></i>
-                <span>Get App</span>
-            </a>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="blog-main">
-        <!-- Hero Section -->
-        <section class="blog-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1 class="hero-title">Wisdom & Growth</h1>
-                    <p class="hero-subtitle">Thoughtful insights for mindful living and personal development</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">6</span>
-                            <span class="stat-label">Articles</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5</span>
-                            <span class="stat-label">Categories</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Insights</span>
-                        </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Wisdom & Growth</h1>
+                <p class="hero-subtitle">Thoughtful insights for mindful living and personal development</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Insights</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Article -->
-        <section class="featured-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Article</h2>
-                    <p>Our latest and most impactful piece</p>
+    <!-- Featured Article -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Article</h2>
+                <p>Our latest and most impactful piece</p>
+            </div>
+            <article class="featured-card">
+                <div class="featured-image">
+                    <div class="image-overlay">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                 </div>
-                <article class="featured-article">
-                    <div class="featured-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-leaf"></i>
+                <div class="featured-content">
+                    <div class="article-meta">
+                        <span class="category mindfulness">Mindfulness</span>
+                        <span class="date">January 2025</span>
+                    </div>
+                    <h3 class="article-title">
+                        <a href="articles/the-art-of-mindful-moments.html">The Art of Mindful Moments</a>
+                    </h3>
+                    <p class="article-excerpt">Discover how to find peace and clarity in everyday moments. Learn
+                        practical techniques for cultivating mindfulness that don't require hours of meditation.</p>
+                    <div class="article-footer">
+                        <span class="read-time">
+                            <i class="fas fa-clock"></i>
+                            5 min read
+                        </span>
+                        <a href="articles/the-art-of-mindful-moments.html" class="read-button">
+                            Read Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Articles</h2>
+                <p>Explore our collection of wisdom and insights</p>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-seedling"></i>
                         </div>
                     </div>
-                    <div class="featured-content">
+                    <div class="card-content">
                         <div class="article-meta">
-                            <span class="category-badge mindfulness">Mindfulness</span>
-                            <span class="article-date">January 2025</span>
+                            <span class="category growth">Personal Growth</span>
+                            <span class="date">Jan 2025</span>
                         </div>
-                        <h2 class="featured-title">
-                            <a href="articles/the-art-of-mindful-moments.html">The Art of Mindful Moments</a>
-                        </h2>
-                        <p class="featured-excerpt">Discover how to find peace and clarity in everyday moments. Learn
-                            practical techniques for cultivating mindfulness that don't require hours of meditation.</p>
-                        <div class="article-footer">
-                            <div class="read-info">
+                        <h3 class="card-title">
+                            <a href="articles/embracing-life-transitions.html">Embracing Life's Transitions</a>
+                        </h3>
+                        <p class="card-excerpt">Life is a series of transitions. Learn how to navigate change with grace
+                            and find meaning in every phase of your journey.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
                                 <i class="fas fa-clock"></i>
-                                <span>5 min read</span>
-                            </div>
-                            <a href="articles/the-art-of-mindful-moments.html" class="read-more-btn">
-                                Read Article
+                                7 min
+                            </span>
+                            <a href="articles/embracing-life-transitions.html" class="card-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="category wisdom">Wisdom</span>
+                            <span class="date">Jan 2025</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="articles/ancient-wisdom-modern-life.html">Ancient Wisdom for Modern Life</a>
+                        </h3>
+                        <p class="card-excerpt">How timeless philosophical insights can guide us through contemporary
+                            challenges and help us live more meaningful lives.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
+                                <i class="fas fa-clock"></i>
+                                6 min
+                            </span>
+                            <a href="articles/ancient-wisdom-modern-life.html" class="card-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="category reflection">Reflection</span>
+                            <span class="date">Jan 2025</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="articles/the-power-of-solitude.html">The Power of Solitude</a>
+                        </h3>
+                        <p class="card-excerpt">In our connected world, solitude has become a lost art. Discover how
+                            quiet moments alone can be your greatest teacher.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
+                                <i class="fas fa-clock"></i>
+                                8 min
+                            </span>
+                            <a href="articles/the-power-of-solitude.html" class="card-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="category inspiration">Inspiration</span>
+                            <span class="date">Jan 2025</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="articles/finding-purpose-daily-life.html">Finding Purpose in Daily Life</a>
+                        </h3>
+                        <p class="card-excerpt">Purpose isn't found in grand gestures but in the small, meaningful
+                            choices we make each day. Learn to recognize and cultivate it.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
+                                <i class="fas fa-clock"></i>
+                                6 min
+                            </span>
+                            <a href="articles/finding-purpose-daily-life.html" class="card-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="category relationships">Relationships</span>
+                            <span class="date">Jan 2025</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="articles/deep-connections.html">Cultivating Deep Connections</a>
+                        </h3>
+                        <p class="card-excerpt">In an age of surface-level interactions, learn how to build and maintain
+                            meaningful relationships that enrich your life.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
+                                <i class="fas fa-clock"></i>
+                                7 min
+                            </span>
+                            <a href="articles/deep-connections.html" class="card-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="card-image">
+                        <div class="image-overlay">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="category growth">Growth</span>
+                            <span class="date">Jan 2025</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="articles/learning-from-failure.html">Learning from Failure</a>
+                        </h3>
+                        <p class="card-excerpt">Failure is not the opposite of success—it's a stepping stone. Discover
+                            how to transform setbacks into wisdom and growth.</p>
+                        <div class="card-footer">
+                            <span class="read-time">
+                                <i class="fas fa-clock"></i>
+                                5 min
+                            </span>
+                            <a href="articles/learning-from-failure.html" class="card-link">
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </article>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Articles Grid -->
-        <section class="articles-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>All Articles</h2>
-                    <p>Explore our collection of wisdom and insights</p>
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-envelope"></i>
                 </div>
-                <div class="articles-grid">
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-seedling"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge growth">Personal Growth</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/embracing-life-transitions.html">Embracing Life's Transitions</a>
-                            </h3>
-                            <p class="card-excerpt">Life is a series of transitions. Learn how to navigate change with
-                                grace and find meaning in every phase of your journey.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>7 min</span>
-                                </div>
-                                <a href="articles/embracing-life-transitions.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge wisdom">Wisdom</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/ancient-wisdom-modern-life.html">Ancient Wisdom for Modern Life</a>
-                            </h3>
-                            <p class="card-excerpt">How timeless philosophical insights can guide us through
-                                contemporary challenges and help us live more meaningful lives.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>6 min</span>
-                                </div>
-                                <a href="articles/ancient-wisdom-modern-life.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-mountain"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge reflection">Reflection</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/the-power-of-solitude.html">The Power of Solitude</a>
-                            </h3>
-                            <p class="card-excerpt">In our connected world, solitude has become a lost art. Discover how
-                                quiet moments alone can be your greatest teacher.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>8 min</span>
-                                </div>
-                                <a href="articles/the-power-of-solitude.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-compass"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge inspiration">Inspiration</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/finding-purpose-daily-life.html">Finding Purpose in Daily Life</a>
-                            </h3>
-                            <p class="card-excerpt">Purpose isn't found in grand gestures but in the small, meaningful
-                                choices we make each day. Learn to recognize and cultivate it.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>6 min</span>
-                                </div>
-                                <a href="articles/finding-purpose-daily-life.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge relationships">Relationships</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/deep-connections.html">Cultivating Deep Connections</a>
-                            </h3>
-                            <p class="card-excerpt">In an age of surface-level interactions, learn how to build and
-                                maintain meaningful relationships that enrich your life.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>7 min</span>
-                                </div>
-                                <a href="articles/deep-connections.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <div class="card-image">
-                            <div class="image-placeholder">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="article-meta">
-                                <span class="category-badge growth">Growth</span>
-                                <span class="article-date">Jan 2025</span>
-                            </div>
-                            <h3 class="card-title">
-                                <a href="articles/learning-from-failure.html">Learning from Failure</a>
-                            </h3>
-                            <p class="card-excerpt">Failure is not the opposite of success—it's a stepping stone.
-                                Discover how to transform setbacks into wisdom and growth.</p>
-                            <div class="card-footer">
-                                <div class="read-info">
-                                    <i class="fas fa-clock"></i>
-                                    <span>5 min</span>
-                                </div>
-                                <a href="articles/learning-from-failure.html" class="card-link">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Section -->
-        <section class="newsletter-section">
-            <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-icon">
-                        <i class="fas fa-envelope"></i>
+                <h2>Stay Connected</h2>
+                <p>Receive thoughtful insights and wisdom delivered to your inbox</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit">
+                            <span>Subscribe</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <h2>Stay Connected</h2>
-                    <p>Receive thoughtful insights and wisdom delivered to your inbox</p>
-                    <form class="newsletter-form">
-                        <div class="form-group">
-                            <input type="email" placeholder="Enter your email address" required>
-                            <button type="submit">
-                                <span>Subscribe</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </form>
-                    <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
-                </div>
+                </form>
+                <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/app-icon-small.png" alt="Soul Deep" class="footer-icon">
+                    <span class="footer-text">Soul Deep</span>
+                </div>
                 <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <span class="footer-separator">•</span>
-                    <a href="blog.html" class="footer-link">Blog</a>
-                    <span class="footer-separator">•</span>
                     <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
-                    <span class="footer-separator">•</span>
                     <a href="terms-of-service.html" class="footer-link">Terms of Service</a>
+                    <a href="https://apps.apple.com/us/app/soul-deep-clarity-moments/id6747335102"
+                        class="footer-link">Download App</a>
                 </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 Soul Deep. All rights reserved.</p>
-                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Soul Deep. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 
 </html>
